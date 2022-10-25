@@ -28,8 +28,9 @@ export default class App extends Component {
 
     renderizarPortas() {
         const portas = []
+        const portaSelecionada = parseFloat(this.state.portaSelecionada)
         for (let i = 1; i <= this.state.totalDePortas; i++) {
-            portas.push(<Porta numero={i} index={i} premiada={this.state.portaSelecionada === i} />)
+            portas.push(<Porta numero={i} index={i} premiada={portaSelecionada === i} />)
         }
 
         return portas.map((porta, index) => {
