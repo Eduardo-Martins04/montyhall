@@ -29,7 +29,7 @@ export default class App extends Component {
     renderizarPortas() {
         const portas = []
         for (let i = 1; i <= this.state.totalDePortas; i++) {
-            portas.push(<Porta numero={i} index={i} premiada={this.state.portaSelecionada == i} />)
+            portas.push(<Porta numero={i} index={i} premiada={this.state.portaSelecionada === i} />)
         }
 
         return portas.map((porta, index) => {
